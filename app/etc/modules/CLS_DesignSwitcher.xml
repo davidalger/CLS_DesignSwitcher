@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <CLS_DesignSwitcher>
+            <active>true</active>
+            <codePool>community</codePool>
+            <depends>
+                <Mage_Core/>
+                <Mage_Catalog/>
+                <Enterprise_PageCache/>
+            </depends>
+        </CLS_DesignSwitcher>
+    </modules>
+</config>

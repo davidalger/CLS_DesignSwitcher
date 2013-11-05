@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * config.xml
+ *
+ * @category    CLS
+ * @package     DesignSwitcher
+ * @copyright   Copyright (c) 2013 David Alger & Classy Llama Studios, LLC
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <CLS_DesignSwitcher>
+            <version>1.0.0</version>
+        </CLS_DesignSwitcher>
+    </modules>
+    
+    <global>
+        <blocks>
+            <cls_designswitcher>
+                <class>CLS_DesignSwitcher_Block</class>
+            </cls_designswitcher>
+        </blocks>
+        
+        <models>
+            <cls_designswitcher>
+                <class>CLS_DesignSwitcher_Model</class>
+            </cls_designswitcher>
+            
+            <core>
+                <rewrite>
+                    <design_package>CLS_DesignSwitcher_Model_Core_Design_Package</design_package>
+                </rewrite>
+            </core>
+            
+            <enterprise_pagecache>
+                <rewrite>
+                    <processor>CLS_DesignSwitcher_Model_Pagecache_Processor</processor>
+                </rewrite>
+            </enterprise_pagecache>
+        </models>
+        
+        <helpers>
+            <cls_designswitcher>
+                <class>CLS_DesignSwitcher_Helper</class>
+            </cls_designswitcher>
+        </helpers>
+    </global>
+    
+    <frontend>
+        <routers>
+            <cls_designswitcher>
+                <use>standard</use>
+                <args>
+                    <module>CLS_DesignSwitcher</module>
+                    <frontName>designswitcher</frontName>
+                </args>
+            </cls_designswitcher>
+        </routers>
+    </frontend>
+</config>
