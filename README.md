@@ -4,13 +4,11 @@ Uses a cookie to allow users to switch back and forth between the desktop and mo
 
 ## How to Use
 
-Utilize the following two paths in links added to the footer of the appropriate desktop and/or mobile theme used on your site:
+To use this module, first install it, then add a link into the footer of the mobile theme used on your site:
 
-1. `/designswitcher/switch/desktop`
+    <a href="<?php echo Mage::helper('cls_designswitcher')->getMobileToDesktopUrl() ?>">View Desktop Site</a>
 
-2. `/designswitcher/switch/mobile`
-
-The first route will place a USE_FULL_SITE cookie to indicate the design exception should be ignored. The latter route will set this cookie's value to 0 to disable the behavior the first instigated. At this time it will not allow users of a desktop browser to view the mobile theme by clicking the link, so keep that in mind during link placement.
+The controller for the `designswitcher/switch/desktop` route will place a `USE_FULL_SITE` cookie to indicate the design exception should be ignored. There is also a route to revert to the mobile theme (`getDesktopToMobileUrl`), although at this time it will not allow users of a desktop browser to view the mobile theme by clicking the link.
 
 ## Installation
 1. Copy module files into Magento root either manually or by using modman
